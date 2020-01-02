@@ -2,7 +2,7 @@
 A third attempt at a personal website
 
 ## The problem
-As a recent bootcamp grad, I need a personal website, but I'm totally broke. I could use GitHub pages, but where's the fun in that? I tried Jekyll on namecheap and the experience is so clunky it's almost like writing a complete website by hand on each update. So with a Namecheap account and $10 to my name, I decided to make the best with what I have:
+As a recent bootcamp grad, I need a personal website, but I'm totally broke. I could use GitHub pages, but where's the fun in that? I tried Jekyll on Namecheap but the experience is so clunky it's almost like writing a complete website by hand on each update. So with a Namecheap account and $10 to my name, I decided to make the best with what I have:
 
 * Heroku's free tier goes to sleep after half an hour on inactivity. I want potential employers to load the site FAST.
 * Rails+React is a big nono on shared plans.
