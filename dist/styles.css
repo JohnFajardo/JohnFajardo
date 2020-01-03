@@ -65,3 +65,13 @@ body {
 .content {
   padding: 16px;
 }
+
+.content h2 {
+  font-size: 40px;
+  margin: 16px 0 16px 0;
+}
+
+article h3 {
+  font-size: 32px;
+  margin: 16px 0 16px 0;
+}

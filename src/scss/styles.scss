@@ -12,7 +12,6 @@ h1, h2, h3, h4 {
     font-weight: 500;
 }
 
-
 p {
     font-family: lato;
     color: #cccccc;
@@ -52,7 +51,6 @@ body {
         border: 2px solid #fff;
         margin: 0 auto;
         border-radius: 50%;
-        // margin-top: 16px;
     }
 
     nav {
@@ -66,4 +64,17 @@ body {
 
 .content {
     padding: 16px;
+
+    h2 {
+        font-size: 40px;
+        margin: 16px 0 16px 0;
+    }
+}
+
+article {
+    
+    h3 {
+        font-size: 32px;
+        margin: 16px 0 16px 0;
+    }
 }
