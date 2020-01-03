@@ -5,7 +5,7 @@
   text-rendering: optimizeLegibility;
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: roboto;
   color: #ccc;
   font-size: 28px;
@@ -14,6 +14,7 @@ h1 {
 
 p {
   font-family: lato;
+  color: #cccccc;
 }
 
 a {
@@ -59,4 +60,8 @@ body {
 
 .navigation nav a {
   padding: 5px;
+}
+
+.content {
+  padding: 16px;
 }

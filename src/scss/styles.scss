@@ -5,15 +5,17 @@
     text-rendering: optimizeLegibility;
 }
 
-h1 {
+h1, h2, h3, h4 {
     font-family: roboto;
     color: #ccc;
     font-size: 28px;
     font-weight: 500;
 }
 
+
 p {
     font-family: lato;
+    color: #cccccc;
 }
 
 a {
@@ -60,4 +62,8 @@ body {
             padding: 5px;
         }
     }
+}
+
+.content {
+    padding: 16px;
 }
