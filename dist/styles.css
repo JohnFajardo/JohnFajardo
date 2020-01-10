@@ -28,16 +28,36 @@ a:hover {
 
 body {
   background-color: #2d3539;
+  margin: 0;
 }
 
 .container {
   width: 100vw;
 }
 
+@media all and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
 .navigation {
   background-color: #343a40;
   text-align: center;
   padding: 16px;
+}
+
+@media all and (min-width: 992px) {
+  .navigation {
+    grid-column: span 3;
+    height: 100vh;
+    background: url("../images/wave.jpg") center;
+    box-shadow: inset 0px 0px 450px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .navigation .title {
@@ -52,6 +72,12 @@ body {
   border: 2px solid #fff;
   margin: 0 auto;
   border-radius: 50%;
+}
+
+@media all and (min-width: 992px) {
+  .navigation img {
+    max-width: 150px;
+  }
 }
 
 .navigation nav {
@@ -69,6 +95,13 @@ body {
 .content h2 {
   font-size: 40px;
   margin: 16px 0 16px 0;
+}
+
+@media all and (min-width: 992px) {
+  .content {
+    grid-column: span 9;
+    padding: 32px 64px;
+  }
 }
 
 article h3 {
