@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
+import cleanCSS from 'gulp-clean-css';
 import imagemin from "gulp-imagemin";
 import browserSync from "browser-sync";
 
@@ -25,6 +26,12 @@ exports.copy = () => (
     .pipe(browserSync.reload({stream: true}))
 );
 
+exports.minifycss = () => (
+    gulp.src('./dist/styles.css')
+    .pipe(cleanCSS({compatibility: 'ie8', level: 2}))
+    .pipe(gulp.dest('dist'))
+);
+
 gulp.task('serve', () => {
     browserSync.init({
         server: {
@@ -34,10 +41,10 @@ gulp.task('serve', () => {
         notify: false,
         injectChanges: true
     });
-    gulp.watch('./src/scss/**/*', gulp.series('sass'));
+    gulp.watch('./src/scss/**/*', gulp.series('sass', 'minifycss'));
     gulp.watch('./src/images/**/*', gulp.series('images'));
     gulp.watch('./src/*.html', gulp.series('copy'));
-    gulp.watch('./dist/*.html').on('change', browserSync.reload);
+    gulp.watch('./dist/*').on('change', browserSync.reload);
 });
 
 gulp.task('default', gulp.series('serve'));

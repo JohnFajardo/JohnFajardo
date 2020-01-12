@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 .profile {
@@ -18,18 +19,21 @@
 }
 
 .nav-list {
-    display: flex;
+    // display: flex;
     padding: 0;
     justify-content: center;
     list-style-type: none;
 
-    li {
-        margin-right: 10px;
-    }
-}
+    .menu-link {
+        display: inline;
+        text-align: center;
+        line-height: 35px;
+        margin-right:15px;
 
-article {
-    clear: both;
+        @media all and (min-width: 992px) {
+            display: block;
+        }
+    }
 }
 
 .separator {
