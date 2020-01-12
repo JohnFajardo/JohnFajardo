@@ -6,7 +6,7 @@ import browserSync from "browser-sync";
 const sassOptions = {outputStyle: 'expanded', errLogToConsole: true};
 
 exports.sass = () => (
-    gulp.src('./src/scss/**/*')
+    gulp.src('./src/scss/styles.scss')
     .pipe(sass(sassOptions))
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.reload({stream: true}))
@@ -34,7 +34,7 @@ gulp.task('serve', () => {
         notify: false,
         injectChanges: true
     });
-    gulp.watch('./src/scss/*.scss', gulp.series('sass'));
+    gulp.watch('./src/scss/**/*', gulp.series('sass'));
     gulp.watch('./src/images/**/*', gulp.series('images'));
     gulp.watch('./src/*.html', gulp.series('copy'));
     gulp.watch('./dist/*.html').on('change', browserSync.reload);
