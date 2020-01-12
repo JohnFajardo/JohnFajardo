@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .profile {
   width: 100%;
   max-width: 50px;
@@ -107,6 +112,13 @@ a:hover {
   display: none;
 }
 
+@media all and (min-width: 992px) {
+  .tagline {
+    display: block;
+    margin: 5px;
+  }
+}
+
 p {
   color: #ccc;
 }
@@ -123,6 +135,10 @@ p {
   color: #fff;
 }
 
+.post-title {
+  margin-top: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -134,13 +150,44 @@ body {
 
 .container {
   width: 100vw;
+  display: grid;
+  height: 100vh;
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .navigation {
   background-color: #343a40;
+  text-align: center;
   padding: 16px;
+}
+
+@media all and (min-width: 992px) {
+  .navigation {
+    grid-column: span 3;
+    height: 100vh;
+    background: url("../images/wave.jpg") center;
+    box-shadow: inset 0px 0px 450px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .content {
   padding: 16px;
+}
+
+@media all and (min-width: 992px) {
+  .content {
+    overflow: auto;
+    grid-column: span 9;
+    padding: 64px;
+    overflow: auto;
+  }
 }

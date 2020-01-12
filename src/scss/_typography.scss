@@ -45,6 +45,10 @@ a {
 
 .tagline {
   display: none;
+  @media all and (min-width: 992px) {
+    display:block;
+    margin: 5px;
+}
 }
 
 p {
@@ -61,4 +65,8 @@ p {
   &:hover {
     color: #fff;
   }
+}
+
+.post-title {
+  margin-top: 16px;
 }
