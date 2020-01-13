@@ -33,12 +33,22 @@ a {
 .title {
   font-size: 28px;
   margin: 10px 0;
-
+  
   a{
     color: #ccc;
-
+  
     &:hover {
-      color:lighten($color: #ccc, $amount: 20)
+      color:lighten($color: #ccc, $amount: 20);
+    }
+
+    @media all and (min-width: 992px) {
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ccc;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 }
@@ -69,4 +79,35 @@ p {
 
 .post-title {
   margin-top: 16px;
+}
+
+.navigation li {
+  @media all and (min-width: 992px) {
+    a {
+      line-height: 45px;
+      color: #ccc;
+      padding-bottom:10px;
+      border-bottom: 1px solid #555;
+      text-decoration: none;
+      margin: 0;
+
+      &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid #fff;
+          color: #fff;
+      }
+  }
+  }
+}
+
+.latest-posts {
+  margin-bottom: 16px;
+}
+
+.post-title {
+  margin-bottom: 8px;
+}
+
+.metadata {
+  margin-bottom: 8px;
 }
