@@ -12,7 +12,7 @@ exports.sass = () => (
     .pipe(gulp.dest('./dist'))
     .pipe(browserSync.reload({stream: true}))
 );
-    
+
 exports.images = () => (
     gulp.src('./src/images/**/*')
     .pipe(imagemin())
@@ -41,7 +41,7 @@ gulp.task('serve', () => {
         notify: false,
         injectChanges: true
     });
-    gulp.watch('./src/scss/**/*', gulp.series('sass', 'minifycss'));
+    gulp.watch('./src/scss/**/*', gulp.series('sass'));
     gulp.watch('./src/images/**/*', gulp.series('images'));
     gulp.watch('./src/*.html', gulp.series('copy'));
     gulp.watch('./dist/*').on('change', browserSync.reload);
