@@ -53,21 +53,20 @@ body {
 
   .page {
     display: inline-block;
-    color: #fff;
-    background-color: #4fb1ba;
+    margin: 0 5px;
+
     padding: 5px;
   }
 
   .next-page {
     display: inline-block;
     padding: 5px;
+    a {
+      color: #4fb1ba;
+    }
   }
 
-  .lol {
-    display: inline-block;
-  }
-
-  .page-active {
+  .active {
     color: #fff;
   }
 }

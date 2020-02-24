@@ -245,8 +245,7 @@ body {
 
 .pagination .page {
   display: inline-block;
-  color: #fff;
-  background-color: #4fb1ba;
+  margin: 0 5px;
   padding: 5px;
 }
 
@@ -255,10 +254,10 @@ body {
   padding: 5px;
 }
 
-.pagination .lol {
-  display: inline-block;
+.pagination .next-page a {
+  color: #4fb1ba;
 }
 
-.pagination .page-active {
+.pagination .active {
   color: #fff;
 }
